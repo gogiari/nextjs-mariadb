@@ -1,0 +1,10 @@
+table {
+    border: 1px black solid;
+    border-collapse: collapse;
+}
+th, tr, td {
+    border: 1px black solid;
+}
+tr:hover {
+    background-color: red;
+}
