@@ -12,7 +12,7 @@ export default function UserList() {
     const [users, setUsers] = useState<User[]>([]);
 
     useEffect(() => {
-           fetch('http://localhost:3001/api/users', { cache: 'no-store' })
+           fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/users`, { cache: 'no-store' })
            .then(resp => resp.json())
            .then(result => {
             setUsers(result);

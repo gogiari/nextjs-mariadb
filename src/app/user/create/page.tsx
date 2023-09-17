@@ -19,7 +19,7 @@ export default function Create() {
             },
             body: JSON.stringify({ userid, password, username, email })
         }
-        fetch('http://localhost:3001/api/users', options)
+        fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/users`, options)
             .then(res => {
                 if (!res.ok) {
                     throw new Error('Network response was not ok');
